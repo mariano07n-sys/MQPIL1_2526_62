@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IFRI_MentorLink — Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0F',
+            surface: '#14141D',
+            elevated: '#1E1E2A',
+            primary: '#00E5A0',
+            muted: '#A0A0B0',
+            borderSubtle: '#262636',
+            success: '#22C55E',
+            warning: '#F59E0B',
+            error: '#EF4444'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-base text-white font-sans antialiased min-h-screen">
+
+  <header class="sticky top-0 z-30 glass-nav" style="backdrop-filter: blur(12px); border-bottom: 1px solid #262636;">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
+        <h1 class="text-xl font-bold tracking-tight">IFRI<span class="text-primary">_MentorLink</span></h1>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-6 text-sm text-muted">
+        <a href="#" class="hover:text-white transition-colors">Fonctionnement</a>
+        <a href="#" class="hover:text-white transition-colors">Statistiques</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="./auth.html" class="text-sm text-muted hover:text-white transition-colors">Connexion</a>
+        <a href="./auth.html" class="btn btn-secondary">S'inscrire</a>
+      </div>
+
+      <button class="lg:hidden btn btn-ghost" aria-label="Menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 pt-16 pb-24">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <h2 class="text-4xl lg:text-5xl font-bold leading-tight -tracking-[0.02em]" style="letter-spacing:-0.02em;">
+          Propulsez votre réussite académique à l'IFRI
+        </h2>
+        <p class="mt-4 text-muted text-sm max-w-xl">
+          Trouvez un mentor de niveau supérieur ou partagez vos compétences avec vos pairs.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="./auth.html" class="btn btn-primary">Trouver un mentor</a>
+          <a href="./auth.html" class="btn btn-secondary">Devenir mentor</a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-4 gap-4">
+          <div class="col-span-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="card p-5 border-borderSubtle" style="border-radius:12px; box-shadow:none; background:#14141D;">
+                <p class="text-sm text-muted mb-2 font-medium">Étape 1</p>
+                <p class="font-bold">Créer son profil</p>
+              </div>
+              <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+                <p class="text-sm text-muted mb-2 font-medium">Étape 2</p>
+                <p class="font-bold">Publier une offre</p>
+              </div>
+              <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+                <p class="text-sm text-muted mb-2 font-medium">Étape 3</p>
+                <p class="font-bold">Trouver son match</p>
+              </div>
+              <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+                <p class="text-sm text-muted mb-2 font-medium">Étape 4</p>
+                <p class="font-bold">Débuter l'échange</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-first lg:order-none">
+        <div class="card p-8" style="border-radius:12px; min-height:320px; background:#14141D;">
+          <div class="h-full flex items-center justify-center">
+            <div class="text-center">
+              <p class="text-muted text-sm">Illustration / Interface Preview</p>
+              <p class="mt-3 font-bold">(Placeholder)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+            <div class="text-2xl font-bold" style="color:var(--primary)">140</div>
+            <p class="text-sm text-muted mt-1">Mentors Actifs</p>
+          </div>
+          <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+            <div class="text-2xl font-bold" style="color:var(--primary)">450</div>
+            <p class="text-sm text-muted mt-1">Mentorés Accompagnés</p>
+          </div>
+          <div class="card p-5" style="border-radius:12px; box-shadow:none; background:#14141D;">
+            <div class="text-2xl font-bold" style="color:var(--primary)">1,200</div>
+            <p class="text-sm text-muted mt-1">Sessions Réalisées</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16">
+      <h3 class="text-lg font-bold">Témoignages</h3>
+      <div class="mt-4 flex overflow-x-auto gap-4 pb-2">
+        <div class="min-w-[420px] card p-6" style="box-shadow:none; border-radius:12px; background:#14141D;">
+          <p class="text-sm">"Grâce au système de matching en Algorithmique, j'ai validé mon semestre 1 avec mention." — L1</p>
+        </div>
+        <div class="min-w-[420px] card p-6" style="box-shadow:none; border-radius:12px; background:#14141D;">
+          <p class="text-sm">"Un mentor vraiment utile, les retours étaient très concrets." — L2</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-borderSubtle py-6">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between text-sm text-muted">
+      <span>© 2026 IFRI_MentorLink. Conçu pour l'excellence académique.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Mentions Légales</a>
+        <a href="#" class="hover:text-white">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

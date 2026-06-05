@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IFRI_MentorLink — Matching</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0F',
+            surface: '#14141D',
+            elevated: '#1E1E2A',
+            primary: '#00E5A0',
+            muted: '#A0A0B0',
+            borderSubtle: '#262636'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
+  <aside class="w-64 bg-surface border-r border-borderSubtle flex flex-col justify-between hidden md:flex">
+    <div class="p-6">
+      <div class="flex items-center gap-2 mb-10">
+        <div class="w-8 h-8 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
+        <h1 class="text-xl font-bold tracking-tight">Mentor<span class="text-primary">Link</span></h1>
+      </div>
+      <nav class="space-y-1">
+        <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-muted hover:bg-elevated hover:text-white transition-colors text-sm">Dashboard</a>
+      </nav>
+    </div>
+    <div class="p-6 border-t border-borderSubtle"> </div>
+  </aside>
+
+  <main class="flex-1 flex flex-col h-full overflow-y-auto">
+    <header class="p-8 pb-4">
+      <h2 class="text-2xl font-bold">CORRESPONDANCE ALGORITHMIQUE HAUTE PERFORMANCE</h2>
+      <p class="text-sm text-muted mt-1">Transparence totale sur les critères.</p>
+    </header>
+
+    <section class="px-8 pb-10">
+      <div class="card p-8 page-enter" style="background:#14141D; box-shadow:none; border-radius:12px; max-width:820px; margin:0 auto;">
+        <div class="flex items-center justify-between gap-6 flex-wrap">
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vous&backgroundColor=14141D" alt="Vous">
+            <span class="font-bold">Vous - L1</span>
+          </div>
+          <div class="text-sm text-muted">ANALYSE DU MATCH : <span class="text-primary font-bold">92%</span></div>
+          <div class="flex items-center gap-3">
+            <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fiona&backgroundColor=14141D" alt="Interlocuteur">
+            <span class="font-bold">Fiona K. - L3</span>
+          </div>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-[220px] h-[220px]">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#262636" stroke-width="8" fill="none" />
+                <circle cx="50" cy="50" r="40" stroke="#00E5A0" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="20" stroke-linecap="round" />
+              </svg>
+              <div class="absolute inset-0 flex items-center justify-center flex-col">
+                <div class="text-4xl font-bold" style="color: var(--primary);">92%</div>
+                <div class="text-xs text-muted mt-1">Score global</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <h3 class="text-sm text-muted font-medium uppercase tracking-wide">VÉRIFICATION DES FACTEURS DE COMPATIBILITÉ</h3>
+
+            <div class="mt-4 space-y-6">
+              <div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-muted">Compétences Validées & Besoins : <b>28/30 Pts</b></span>
+                  <span class="text-sm font-bold" style="color: var(--success);">93%</span>
+                </div>
+                <div class="mt-2 h-2 rounded-full bg-[#262636] overflow-hidden">
+                  <div class="h-full bg-[#22C55E]" style="width:93%;"></div>
+                </div>
+                <p class="text-sm text-muted mt-2">Fiona maîtrise l'Algèbre relationnelle demandée dans vos fiches de lacunes.</p>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-muted">Horaires & Disponibilités communes : <b>20/20 Pts</b></span>
+                  <span class="text-sm font-bold" style="color: var(--success);">100%</span>
+                </div>
+                <div class="mt-2 h-2 rounded-full bg-[#262636] overflow-hidden">
+                  <div class="h-full bg-[#22C55E]" style="width:100%;"></div>
+                </div>
+                <p class="text-sm text-muted mt-2">Vos créneaux libres du Samedi matin et Mercredi soir correspondent exactement.</p>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-muted">Proximité de Filière d'Étude : <b>18/20 Pts</b></span>
+                  <span class="text-sm font-bold" style="color: var(--success);">90%</span>
+                </div>
+                <div class="mt-2 h-2 rounded-full bg-[#262636] overflow-hidden">
+                  <div class="h-full bg-[#22C55E]" style="width:90%;"></div>
+                </div>
+                <p class="text-sm text-muted mt-2">Tous deux issus du département Informatique Fondamentale de l'IFRI.</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="./messages.html" class="btn btn-primary flex-1">Engager la conversation</a>
+              <a href="./dashboard.html" class="btn btn-ghost">Ignorer la suggestion</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

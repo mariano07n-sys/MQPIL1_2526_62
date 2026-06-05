@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IFRI_MentorLink — Messages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0F',
+            surface: '#14141D',
+            elevated: '#1E1E2A',
+            primary: '#00E5A0',
+            muted: '#A0A0B0',
+            borderSubtle: '#262636'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
+  <aside class="w-64 bg-surface border-r border-borderSubtle flex flex-col justify-between hidden md:flex">
+    <div class="p-6">
+      <div class="flex items-center gap-2 mb-10">
+        <div class="w-8 h-8 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
+        <h1 class="text-xl font-bold tracking-tight">Mentor<span class="text-primary">Link</span></h1>
+      </div>
+      <nav class="space-y-1">
+        <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-muted hover:bg-elevated hover:text-white transition-colors text-sm">Dashboard</a>
+      </nav>
+    </div>
+    <div class="p-6 border-t border-borderSubtle"></div>
+  </aside>
+
+  <main class="flex-1 h-full flex overflow-hidden">
+    <section class="w-72 border-r border-borderSubtle hidden lg:flex flex-col">
+      <div class="p-4 border-b border-borderSubtle">
+        <input class="input" placeholder="Rechercher un compagnon..." />
+      </div>
+      <div class="flex-1 overflow-y-auto p-4 space-y-4">
+        <div class="flex items-start gap-3">
+          <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marc&backgroundColor=14141D" alt="Avatar">
+          <div>
+            <div class="font-bold">Marc-Aurèle (L3)</div>
+            <div class="text-xs text-muted">On se voit à la BU à 14h ?</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Fiona&backgroundColor=14141D" alt="Avatar">
+          <div>
+            <div class="font-bold">Fiona K. (L3)</div>
+            <div class="text-xs text-muted">Merci pour l'aide hier !</div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border-t border-borderSubtle">
+        <button class="btn btn-ghost w-full">Archiver les discussions</button>
+      </div>
+    </section>
+
+    <section class="flex-1 flex flex-col">
+      <header class="p-4 border-b border-borderSubtle flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marc&backgroundColor=14141D" alt="Avatar">
+          <div>
+            <div class="font-bold"># MARC-AURÈLE TOVI (L3)</div>
+            <div class="text-xs text-muted">Indicateur connecté en ligne</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="flex-1 overflow-y-auto p-5 space-y-4">
+        <div class="flex items-start gap-3">
+          <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marc&backgroundColor=14141D" alt="Avatar">
+          <div class="max-w-[520px] bg-elevated border border-borderSubtle rounded-xl p-3">
+            <div class="text-xs text-muted">09:14 Marc-Aurèle :</div>
+            <div class="text-sm">Salut ! J'ai bien analysé tes lacunes en adressage IP. On peut bosser ça.</div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 justify-end">
+          <div class="max-w-[520px] bg-elevated border border-borderSubtle rounded-xl p-3">
+            <div class="text-xs text-muted text-right">09:16 Vous :</div>
+            <div class="text-sm">Super, merci ! Est-ce qu'on doit apporter les TP de l'année passée ?</div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marc&backgroundColor=14141D" alt="Avatar">
+          <div class="max-w-[520px] bg-elevated border border-borderSubtle rounded-xl p-3">
+            <div class="text-xs text-muted">09:17 Marc-Aurèle :</div>
+            <div class="text-sm">Oui, absolument, prends le PDF du TP2</div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="p-4 border-t border-borderSubtle">
+        <div class="flex items-center gap-3">
+          <button class="btn btn-ghost p-2" style="width:40px;height:40px; padding:0;">+</button>
+          <input class="input flex-1" placeholder="Écrire votre message dans #Marc-Aurèle..." />
+          <button class="btn btn-primary" style="height:40px; padding-left:1rem; padding-right:1rem;">Envoyer</button>
+        </div>
+      </footer>
+    </section>
+
+    <section class="w-80 border-l border-borderSubtle hidden xl:flex flex-col">
+      <div class="p-4 border-b border-borderSubtle">
+        <div class="font-bold">Infos interlocuteur</div>
+        <div class="text-xs text-muted mt-1">Marc-Aurèle Tovi</div>
+      </div>
+
+      <div class="p-4 space-y-4 overflow-y-auto">
+        <div class="bg-elevated border border-borderSubtle rounded-xl p-4">
+          <p class="text-sm font-bold">Membre depuis : Mars 2026</p>
+          <div class="mt-3">
+            <p class="text-sm text-muted">Matières de Mentorat :</p>
+            <ul class="text-sm mt-2 space-y-1">
+              <li>* Administration Réseaux</li>
+              <li>* Sécurité Informatique</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-elevated border border-borderSubtle rounded-xl p-4">
+          <p class="text-sm font-bold">Fichiers partagés (Drive)</p>
+          <div class="mt-3 space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="badge">[doc]</span> <span>Exercices_Routage.pdf</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="badge">[img]</span> <span>Topologie_Lab.png</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <button class="btn btn-secondary w-full">Bloquer l'utilisateur</button>
+          <button class="btn btn-ghost w-full">Signaler un comportement</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

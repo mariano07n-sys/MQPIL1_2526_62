@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IFRI_MentorLink — Créer une offre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0F',
+            surface: '#14141D',
+            elevated: '#1E1E2A',
+            primary: '#00E5A0',
+            muted: '#A0A0B0',
+            borderSubtle: '#262636',
+            success: '#22C55E',
+            warning: '#F59E0B',
+            error: '#EF4444'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
+  <aside class="w-64 bg-surface border-r border-borderSubtle flex flex-col justify-between hidden md:flex">
+    <div class="p-6">
+      <div class="flex items-center gap-2 mb-10">
+        <div class="w-8 h-8 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
+        <h1 class="text-xl font-bold tracking-tight">Mentor<span class="text-primary">Link</span></h1>
+      </div>
+      <nav class="space-y-1">
+        <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-muted hover:bg-elevated hover:text-white transition-colors text-sm">Dashboard</a>
+        <a href="./search.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-muted hover:bg-elevated hover:text-white transition-colors text-sm">Recherche</a>
+      </nav>
+    </div>
+    <div class="p-6 border-t border-borderSubtle"> </div>
+  </aside>
+
+  <main class="flex-1 flex flex-col h-full overflow-y-auto">
+    <header class="p-8 pb-4">
+      <h2 class="text-2xl font-bold">CRÉER UNE NOUVELLE OFFRE</h2>
+      <p class="text-sm text-muted mt-1">Formulaire + aperçu visuel (split screen).</p>
+    </header>
+
+    <section class="px-8 pb-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Form -->
+        <div class="lg:col-span-7">
+          <div class="card p-6" style="box-shadow:none; border-radius:12px; background:#14141D;">
+            <div class="space-y-4">
+              <div>
+                <label class="text-sm text-muted">Matière ciblée</label>
+                <select class="input mt-2">
+                  <option>Sélectionner la matière informatique v</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm text-muted">Description de l'offre</label>
+                <textarea class="input h-auto mt-2 min-h-[120px] py-2" placeholder="Écrivez ici les détails de votre annonce..."></textarea>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <p class="text-sm text-muted mb-2">Format d'apprentissage</p>
+                  <label class="flex items-center gap-2 text-sm">
+                    <input type="radio" name="fmt" checked /> <span>Présentiel à l'IFRI</span>
+                  </label>
+                  <label class="flex items-center gap-2 text-sm mt-2">
+                    <input type="radio" name="fmt" /> <span>En Ligne</span>
+                  </label>
+                </div>
+                <div>
+                  <p class="text-sm text-muted mb-2">Disponibilités hebdomadaires</p>
+                  <div class="flex flex-wrap gap-3">
+                    <label class="text-sm flex items-center gap-2"><input type="checkbox" checked/> Lundi Soir</label>
+                    <label class="text-sm flex items-center gap-2"><input type="checkbox" /> Mardi Matin</label>
+                    <label class="text-sm flex items-center gap-2"><input type="checkbox" checked/> Samedi</label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary w-full">Publier l'annonce immédiatement</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preview -->
+        <div class="lg:col-span-5">
+          <div class="card p-6" style="box-shadow:none; border-radius:12px; background:#14141D;">
+            <p class="text-sm text-muted mb-3">VOTRE CARTE TELLE QU'ELLE SERA RECHERCHÉE</p>
+            <div class="border border-borderSubtle rounded-xl p-4">
+              <div class="flex items-center gap-3">
+                <img class="w-10 h-10 rounded-full" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vous&backgroundColor=00E5A0" alt="Profil">
+                <div>
+                  <p class="font-bold">Votre Nom</p>
+                  <p class="text-xs text-muted">(Preview)</p>
+                </div>
+              </div>
+              <div class="mt-4 text-sm">
+                <p><span class="text-muted">Matière :</span> <b>Nom de la Matière Sélectionnée</b></p>
+                <p class="mt-2"><span class="text-muted">Format :</span> <b>En ligne / Présentiel</b></p>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-muted">Aperçu dynamique de la description saisie...</p>
+              </div>
+              <div class="mt-5 border border-borderSubtle rounded-lg p-3 bg-elevated">
+                <p class="text-sm font-bold">Conseil de conception</p>
+                <p class="text-sm text-muted mt-1">Soyez précis dans vos créneaux horaires pour augmenter la pertinence du match.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

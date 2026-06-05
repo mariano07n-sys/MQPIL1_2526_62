@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IFRI_MentorLink — Auth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            base: '#0A0A0F',
+            surface: '#14141D',
+            elevated: '#1E1E2A',
+            primary: '#00E5A0',
+            muted: '#A0A0B0',
+            borderSubtle: '#262636'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
+
+  <main class="h-full flex items-center justify-center px-6">
+    <section class="w-full max-w-[420px] bg-surface border border-borderSubtle rounded-xl p-6 md:p-8" style="box-shadow: 0px 8px 32px rgba(0,0,0,0.4);">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
+        <h1 class="text-xl font-bold tracking-tight">IFRI<span class="text-primary">_MentorLink</span></h1>
+      </div>
+
+      <h2 class="text-lg font-bold">Connexion à votre espace</h2>
+      <p class="text-sm text-muted mt-1">Accédez à la communauté d'entraide de l'IFRI.</p>
+
+      <form class="mt-6 space-y-4" onsubmit="return false;">
+        <div>
+          <label class="text-sm text-muted">Adresse Email ou Numéro de Téléphone</label>
+          <input class="input" placeholder="ex: student@ifri.uac.bj" />
+        </div>
+        <div>
+          <div class="flex items-center justify-between">
+            <label class="text-sm text-muted">Mot de passe</label>
+            <a href="#" class="text-sm text-muted hover:text-white">Mot de passe oublié ?</a>
+          </div>
+          <input type="password" class="input" placeholder="******************" />
+        </div>
+
+        <button class="btn btn-primary w-full" type="submit">Se connecter</button>
+
+        <p class="text-sm text-muted">
+          Pas encore inscrit ?
+          <a href="./onboarding.html" class="text-primary hover:underline">Créer un compte d'étudiant</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
+
