@@ -5,24 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>IFRI_MentorLink — Créer une demande</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
-            base: '#0A0A0F',
-            surface: '#14141D',
-            elevated: '#1E1E2A',
-            primary: '#00E5A0',
-            muted: '#A0A0B0',
-            borderSubtle: '#262636',
-            success: '#22C55E',
-            warning: '#F59E0B',
-            error: '#EF4444'
+            base: '#06122C',
+            surface: '#09182F',
+            elevated: '#10254A',
+            primary: '#38F1D7',
+            muted: '#95ABC3',
+            borderSubtle: 'rgba(255,255,255,0.12)'
           }
         }
       }
@@ -31,6 +28,14 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
+
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-screen__panel">
+      <img src="./Pictures/WhatsApp%20Image%202026-06-04%20at%204.59.37%20PM.jpeg" alt="MentorLink" class="splash-screen__logo" />
+      <div class="splash-screen__title">IFRI MentorLink</div>
+      <div class="splash-screen__subtitle">Connexion intelligente dans un univers bleu-vert</div>
+    </div>
+  </div>
   <aside class="w-64 bg-surface border-r border-borderSubtle flex flex-col justify-between hidden md:flex">
     <div class="p-6">
       <div class="flex items-center gap-2 mb-10">
