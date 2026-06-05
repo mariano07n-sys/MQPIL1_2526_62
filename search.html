@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <title>IFRI_MentorLink — Recherche</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'] },
           colors: {
-            base: '#0A0A0F',
-            surface: '#14141D',
-            elevated: '#1E1E2A',
-            primary: '#00E5A0',
-            muted: '#A0A0B0',
-            borderSubtle: '#262636'
+            base: '#06122C',
+            surface: '#09182F',
+            elevated: '#10254A',
+            primary: '#38F1D7',
+            muted: '#95ABC3',
+            borderSubtle: 'rgba(255,255,255,0.12)',
+            success: '#22C55E',
+            warning: '#F59E0B',
+            error: '#EF4444'
           }
         }
       }
-    }
+    };
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="bg-base text-white font-sans antialiased min-h-screen overflow-auto">
@@ -33,7 +37,7 @@
     <div class="p-6">
       <div class="flex items-center gap-2 mb-10">
         <div class="w-8 h-8 rounded bg-primary text-base flex items-center justify-center font-bold text-lg">M</div>
-        <h1 class="text-xl font-bold tracking-tight">Mentor<span class="text-primary">Link</span></h1>
+        <div class="text-xl font-bold tracking-tight">Mentor<span class="text-primary">Link</span></div>
       </div>
       <nav class="space-y-1">
         <a href="./dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-lg text-muted hover:bg-elevated hover:text-white transition-colors text-sm">
@@ -164,6 +168,16 @@
       </div>
     </section>
   </main>
+
+  <footer class="border-t border-borderSubtle py-6">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between text-sm text-muted">
+      <span>© 2026 IFRI_MentorLink. Conçu pour l'excellence académique.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Mentions Légales</a>
+        <a href="#" class="hover:text-white">Support</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
 
