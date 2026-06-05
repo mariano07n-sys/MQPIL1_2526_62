@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <title>IFRI_MentorLink — Landing</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'] },
           colors: {
             base: '#06122C',
             surface: '#09182F',
             elevated: '#10254A',
             primary: '#38F1D7',
             muted: '#95ABC3',
-            borderSubtle: 'rgba(255,255,255,0.12)'
+            borderSubtle: 'rgba(255,255,255,0.12)',
+            success: '#22C55E',
+            warning: '#F59E0B',
+            error: '#EF4444'
           }
         }
       }
-    }
+    };
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body class="bg-base text-white font-sans antialiased min-h-screen">
